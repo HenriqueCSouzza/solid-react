@@ -1,24 +1,44 @@
-import { useRoutes } from "react-router-dom";
-import { FaBeer } from "react-icons/fa";
+import { useRoutes, Navigate } from 'react-router-dom'
+import Dashboard from './Dashboard'
+import SRP from './SRP'
+import OCP from './OCP'
+import LSP from './LSP'
+import ISP from './ISP'
+import DIP from './DIP'
+
 export default function Guest() {
   const Routes = useRoutes([
     {
-      path: "/",
-      element: (
-        <>
-          <a href="/single-responsibility-principle">S</a>.
-          <a href="/open-closed-principle">O</a>.
-          <a href="/liskov-substitution-principle">L</a>.
-          <a href="/interface-segregation-principle">I</a>.
-          <a href="/dependency-inversion-principle">D</a> - com React <FaBeer />
-        </>
-      ),
+      path: '/',
+      element: <Navigate to="/single-responsibility-principle" />,
     },
     {
-      path: "/login",
-      element: <></>,
+      path: '/',
+      element: <Dashboard />,
+      children: [
+        {
+          path: '/single-responsibility-principle',
+          element: <SRP />,
+        },
+        {
+          path: '/open-closed-principle',
+          element: <OCP />,
+        },
+        {
+          path: '/liskov-substitution-principle',
+          element: <LSP />,
+        },
+        {
+          path: '/interface-segregation-principle',
+          element: <ISP />,
+        },
+        {
+          path: '/dependency-inversion-principle',
+          element: <DIP />,
+        },
+      ],
     },
-  ]);
+  ])
 
-  return Routes;
+  return Routes
 }
