@@ -19,7 +19,7 @@ export default function AppBarLogo() {
           textDecoration: 'none',
         }}
       >
-        LOGO
+        LIVAR Devs
       </Typography>
     </>
   )

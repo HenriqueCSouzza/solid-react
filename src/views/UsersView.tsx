@@ -6,7 +6,7 @@ import CardItem from '../components/CardItem/CardItem'
 import User from '../types/user'
 
 export default function UsersView() {
-  const { users } = useContext<GlobalContextProps>(globalContext)
+  const { users, setUser } = useContext<GlobalContextProps>(globalContext)
   return (
     <Container>
       <Grid container flexDirection="row" spacing={2}>
@@ -25,6 +25,9 @@ export default function UsersView() {
                   }}
                   content={{
                     text: item.bio || 'não gosto de biografia',
+                    onClick: () => {
+                      setUser(item)
+                    },
                   }}
                   header={{
                     subheader: item.login,

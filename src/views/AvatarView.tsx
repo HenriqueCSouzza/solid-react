@@ -4,10 +4,9 @@ import globalContext from '../context/globalContext'
 import Box from '@mui/material/Box'
 import Avatar from '@mui/material/Avatar'
 
-// Princípios utilizados, Single Responsibility e Liskov Substitution
+// Princípios utilizados, Single Responsibility e Dependency Inversion
 export default function AvatarView() {
   const { user } = useContext<GlobalContextProps>(globalContext)
-  console.log(user)
 
   return (
     <Box sx={{ flexGrow: 0 }}>

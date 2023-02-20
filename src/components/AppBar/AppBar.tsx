@@ -7,7 +7,7 @@ import AvatarView from '../../views/AvatarView'
 
 function ResponsiveAppBar() {
   return (
-    <AppBar position="static" component="nav">
+    <AppBar position="fixed" component="nav" color="secondary">
       <Container maxWidth="xl">
         <Toolbar disableGutters variant="dense">
           <AppBarMenu />
