@@ -1,16 +1,17 @@
 import { useRoutes, Navigate } from 'react-router-dom'
-import Dashboard from './Dashboard'
-import SRP from './SRP'
-import OCP from './OCP'
-import LSP from './LSP'
-import ISP from './ISP'
-import DIP from './DIP'
+import Dashboard from './template/Dashboard'
+import UsersPage from './pages/Users'
+import SRP from './examples/SRP'
+import OCP from './examples/OCP'
+import LSP from './examples/LSP'
+import ISP from './examples/ISP'
+import DIP from './examples/DIP'
 
 export default function Guest() {
   const Routes = useRoutes([
     {
       path: '/',
-      element: <Navigate to="/single-responsibility-principle" />,
+      element: <Navigate to="/users" />,
     },
     {
       path: '/',
@@ -35,6 +36,10 @@ export default function Guest() {
         {
           path: '/dependency-inversion-principle',
           element: <DIP />,
+        },
+        {
+          path: '/users',
+          element: <UsersPage />,
         },
       ],
     },
