@@ -1,5 +1,6 @@
-import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import { orange } from "@mui/material/colors";
 
 export default function Footer() {
   return (
@@ -8,12 +9,21 @@ export default function Footer() {
       width="100%"
       p={1}
       sx={{
-        backgroundColor: (theme) => theme.palette.grey[400],
-        display: 'flex',
-        justifyContent: 'center',
+        backgroundColor: (theme) => orange[200],
+        display: "flex",
+        justifyContent: "center",
+        a: { textDecoration: "none" },
       }}
     >
-      <Typography alignSelf="center">@Solid</Typography>
+      <Typography
+        component="a"
+        href="https://stealth-truffle-01b.notion.site/SOLID-com-React-44d1fda6652d472f90ad8a0343549078"
+        target="_blank"
+        color="secondary"
+        fontWeight={600}
+      >
+        SOLID
+      </Typography>
     </Box>
-  )
+  );
 }
