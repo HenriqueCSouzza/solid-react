@@ -1,26 +1,26 @@
-import Avatar from '@mui/material/Avatar'
-import Box from '@mui/material/Box'
-import Card from '@mui/material/Card'
-import CardActions from '@mui/material/CardActions'
-import CardContent from '@mui/material/CardContent'
-import IconButton from '@mui/material/IconButton'
-import Title from '../Title'
-import SubTitle from '../SubTitle'
-import BodyText from '../BodyText'
-import { red } from '@mui/material/colors'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import { Grid } from '@mui/material'
+import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import IconButton from "@mui/material/IconButton";
+import Title from "../Title";
+import SubTitle from "../SubTitle";
+import BodyText from "../BodyText";
+import { red } from "@mui/material/colors";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import { Grid } from "@mui/material";
 
 interface CardItemProps {
   avatar: {
-    text?: string
-    src?: string
-  }
-  header: { title?: string; subheader?: string }
+    text?: string;
+    src?: string;
+  };
+  header: { title?: string; subheader?: string };
   content: {
-    text?: string
-    onClick?: any
-  }
+    text?: string;
+    onClick?: any;
+  };
 }
 
 export default function CardItem({ header, avatar, content }: CardItemProps) {
@@ -54,8 +54,8 @@ export default function CardItem({ header, avatar, content }: CardItemProps) {
         </Grid>
         <Box
           sx={{
-            backgroundColor: (theme) => theme.palette.grey[200],
-            height: '150px',
+            backgroundColor: (theme) => theme.palette.grey[400],
+            height: "150px",
             padding: 1,
           }}
         >
@@ -68,5 +68,5 @@ export default function CardItem({ header, avatar, content }: CardItemProps) {
         </IconButton>
       </CardActions>
     </Card>
-  )
+  );
 }

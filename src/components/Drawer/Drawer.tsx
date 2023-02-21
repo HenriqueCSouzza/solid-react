@@ -1,10 +1,14 @@
-import { Drawer, DialogContent, DialogTitle, DrawerProps } from '@mui/material/'
-import { sxContent, sxDialogTitle, sxDrawer } from './style'
+import {
+  Drawer,
+  DialogContent,
+  DialogTitle,
+  DrawerProps,
+} from "@mui/material/";
+import { sxContent, sxDialogTitle, sxDrawer } from "./style";
 
 interface Props extends DrawerProps {
-  open: boolean
-  header: JSX.Element
-  content: JSX.Element
+  header: JSX.Element;
+  content: JSX.Element;
 }
 
 export default function DrawerStyled({
@@ -26,5 +30,5 @@ export default function DrawerStyled({
         <DialogContent sx={sxContent}>{content}</DialogContent>
       </Drawer>
     </>
-  )
+  );
 }

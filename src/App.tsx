@@ -1,8 +1,8 @@
-import { ThemeProvider, createTheme, CssBaseline } from '@mui/material'
-import { GlobalContext } from './context/globalContext'
-import Guest from './Guest'
+import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
+import { GlobalContext } from "./context/globalContext";
+import Guest from "./Guest";
 
-const theme = createTheme()
+const theme = createTheme({ palette: { mode: "dark" } });
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         }
       />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

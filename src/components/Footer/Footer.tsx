@@ -9,7 +9,7 @@ export default function Footer() {
       width="100%"
       p={1}
       sx={{
-        backgroundColor: (theme) => orange[200],
+        backgroundColor: (theme) => theme.palette.grey[900],
         display: "flex",
         justifyContent: "center",
         a: { textDecoration: "none" },
@@ -19,7 +19,7 @@ export default function Footer() {
         component="a"
         href="https://stealth-truffle-01b.notion.site/SOLID-com-React-44d1fda6652d472f90ad8a0343549078"
         target="_blank"
-        color="secondary"
+        color="white"
         fontWeight={600}
       >
         SOLID

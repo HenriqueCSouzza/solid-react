@@ -1,13 +1,13 @@
-import { Outlet } from 'react-router-dom'
-import AppBar from '../components/AppBar'
-import Footer from '../components/Footer'
-import { Box, Grid } from '@mui/material'
+import { Outlet } from "react-router-dom";
+import AppBar from "../components/AppBar";
+import Footer from "../components/Footer";
+import { Box, Grid } from "@mui/material";
 
 export default function Dashboard() {
   return (
     <Box
       sx={{
-        backgroundColor: (theme) => theme.palette.grey[50],
+        backgroundColor: (theme) => theme.palette.background.default,
       }}
     >
       <Grid container flexDirection="column" spacing={10}>
@@ -24,5 +24,5 @@ export default function Dashboard() {
         </Grid>
       </Grid>
     </Box>
-  )
+  );
 }

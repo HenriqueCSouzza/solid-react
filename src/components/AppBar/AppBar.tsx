@@ -6,7 +6,7 @@ import AppBarMenu from "./AppBarMenu";
 
 function ResponsiveAppBar() {
   return (
-    <AppBar position="fixed" component="nav" color="secondary">
+    <AppBar position="fixed" component="nav">
       <Container maxWidth="xl">
         <Toolbar disableGutters variant="regular">
           <AppBarMenu />
