@@ -1,9 +1,7 @@
 import DrawerStyled from "../../components/Drawer/Drawer";
-import { useContext } from "react";
-import GlobalContextProps from "../../types/context";
-import globalContext from "../../context/globalContext";
 import UserContent from "./UserContent";
 import UserHeader from "./UserHeader";
+import useUsers from "../../hooks/useUsers";
 
 export default function UserDrawerView({
   open,
@@ -14,7 +12,7 @@ export default function UserDrawerView({
   onClose: any;
   githubId: number;
 }) {
-  const { users } = useContext<GlobalContextProps>(globalContext);
+  const { users } = useUsers();
   const findUser = users.find((item) => item.id === githubId);
 
   return (
