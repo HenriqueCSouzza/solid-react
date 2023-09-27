@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout código-fonte
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Instalar dependências e construir o aplicativo
         run: |
@@ -19,10 +19,12 @@ jobs:
           tsc && vite build
 
       - name: Deploy para Netlify
-        uses: netlify/actions/cli@v1
+        uses: nwtgck/actions-netlify@v2.0
         with:
+          publish-dir: "./dist"
           command: deploy
           args: --prod
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: your-netlify-site-id # Substitua pelo ID do seu site Netlify
+          NETLIFY_SITE_ID: d64669d9-352b-4a28-9165-1177d16ae9bd
+
+          # Substitua pelo ID do seu site Netlify
