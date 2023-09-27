@@ -1,0 +1,28 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - main # ajuste para a branch principal do seu repositório
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código-fonte
+        uses: actions/checkout@v2
+
+      - name: Instalar dependências e construir o aplicativo
+        run: |
+          yarn
+          tsc && vite build
+
+      - name: Deploy para Netlify
+        uses: netlify/actions/cli@v1
+        with:
+          command: deploy
+          args: --prod
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: your-netlify-site-id # Substitua pelo ID do seu site Netlify
