@@ -26,7 +26,7 @@ jobs:
         with:
           # npm cache files are stored in `~/.npm` on Linux/macOS
           path: ./node_modules
-          key: ${{ runner.os }}-build-prod-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-build-prod-${{ hashFiles('**/yarn.lock') }}
 
       - name: Deploy para Netlify
         uses: nwtgck/actions-netlify@v2.0
