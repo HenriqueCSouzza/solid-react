@@ -16,7 +16,7 @@ jobs:
       - name: Instalar dependências e construir o aplicativo
         run: |
           yarn
-          tsc && vite build
+          yarn build
 
       - name: Deploy para Netlify
         uses: nwtgck/actions-netlify@v2.0
