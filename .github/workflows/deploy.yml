@@ -18,6 +18,16 @@ jobs:
           yarn
           yarn build
 
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ./node_modules
+          key: ${{ runner.os }}-build-prod-${{ hashFiles('**/package-lock.json') }}
+
       - name: Deploy para Netlify
         uses: nwtgck/actions-netlify@v2.0
         with:
@@ -26,5 +36,3 @@ jobs:
           args: --prod
         env:
           NETLIFY_SITE_ID: d64669d9-352b-4a28-9165-1177d16ae9bd
-
-          # Substitua pelo ID do seu site Netlify
