@@ -35,4 +35,4 @@ jobs:
           command: deploy
           args: --prod
         env:
-          NETLIFY_SITE_ID: d64669d9-352b-4a28-9165-1177d16ae9bd
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
