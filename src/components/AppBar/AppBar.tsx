@@ -9,7 +9,6 @@ function ResponsiveAppBar() {
     <AppBar position="fixed" component="nav">
       <Container maxWidth="xl">
         <Toolbar disableGutters variant="regular">
-          <AppBarMenu />
           <AppBarLogo />
         </Toolbar>
       </Container>
